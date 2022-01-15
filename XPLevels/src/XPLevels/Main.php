@@ -59,33 +59,7 @@ class Main extends PluginBase implements Listener {
 				}
 			}
 			break;
-		case "addcredits":
-			if($sender instanceof Player) {
-                  if($sender->hasPermission("addcredits.cmd")) {
-						if((!isset($args[0]) and !isset($args[1])) or (!isset($args[0]) or !isset($args[1]))) {
-							$sender->sendMessage("Usage: /addcredits <player> <credits>");
-						}
-						if(isset($args[0]) and isset($args[1])) {
-							if(!is_int($args[1])) {
-								$player->sendMessage("Usage: /addcredits <player> <credits>");
-							} elseif(is_int($args[1])) {
-								$target = $this->getServer()->getPlayer($args[0])->getName();
-								$credits = $args[1];
-								if($target instanceof Player){
-							$this->addCredits($target, $credits);
-							}
-							}
-						}
-					} else {
-						$sender->sendMessage("§cYou do not have permission to use this command.");
-					}
-				} else {
-                   $sender->sendMessage("§6Please run this command in-game.");				}
-			}
-			break;
-		}
-		return true;
-	}
+		
 	
 	//ADD PROFILE
 	public function onJoin(PlayerJoinEvent $event) {
