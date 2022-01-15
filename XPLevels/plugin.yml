@@ -1,0 +1,12 @@
+name: XpLevels
+main: XPLevels\main
+author: Dready
+api: 3.0.0
+version: 1.0.0
+
+commands:
+  stats:
+    description: "Check your stats"
+  addcredits:
+    description: "Adds credits to a player"
+    default: op
